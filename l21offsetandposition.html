@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>offset and position Method</title>
+
+    <style type="text/css">
+
+        body{
+            padding: 0;
+            margin: 0;
+        }
+
+        .offset{
+            display: flex;
+
+        }
+        .box{
+            width: 80px;
+            height: 80px;
+
+            /* margin: 0; */
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="container">
+
+        <div class="offset">
+
+            <div class="box" style="background-color: red;"></div>
+            <div class="box" style="background-color: green;"></div>
+            <div class="box" style="background-color: orange;"></div>
+            <div class="box" style="background-color: blue;"></div>
+
+        </div>
+
+        <table>
+            <tr>
+                <td id="oresultl"></td>
+                <td id="oresultt"></td>
+            </tr>
+
+            <tr>
+                <td id="presultl"></td>
+                <td id="presultt"></td>
+            </tr>
+        </table>
+    </div>
+    <script type="text/javascript" src="./libs/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // console.log("hi");
+
+            //offset()
+            // $(".box").click(function(){
+
+            //     var offsetbox = $(this).offset();
+            //     $("#oresultl").html("left offset: <br>"+offsetbox.left+"</br>");
+            //     $("#oresultt").html("top offset: <br>"+offsetbox.top+"</br>");
+
+            // })
+
+            //positon()
+            $(".box").click(function(){
+                
+                var positionbox = $(this).position();
+                $("#presultl").html("left position: <br>"+positionbox.left+"</br>");
+                $("#presultt").html("top position: <br>"+positionbox.top+"</br>");
+
+            })
+        })
+    </script>
+    
+</body>
+</html>
+<!-- //31PT -->

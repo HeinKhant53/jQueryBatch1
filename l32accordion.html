@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>UI accordion Method</title>
+
+    <!-- <link rel="stylesheet" href="./libs/jquery-ui-1.13.1/jquery-ui.min.css" type="text/css"> -->
+
+    <link rel="stylesheet" href="./libs/jquery-ui-1.13.1.custom/jquery-ui.min.css" type="text/css">
+    
+    <style type="text/css">
+        body{
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: 900px;
+
+            
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="acc">
+            <h2>FAQ : Get started with jQuery Ui</h2>
+            <div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt accusantium minima repellat saepe alias maiores quos, voluptates magnam quaerat. Necessitatibus harum porro ipsum numquam aut possimus aperiam qui repellat fuga?</p>
+            </div>
+
+            <h2>FAQ : How to use jQuery UI</h2>
+            <div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt accusantium minima repellat saepe alias maiores quos, voluptates magnam quaerat.</p>
+                <hr/>
+                <p>Necessitatibus harum porro ipsum numquam aut possimus aperiam qui repellat fuga?
+                </p>
+            </div>
+
+            <h2>FAQ : Found a bug?</h2>
+            <div>
+                <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt accusantium minima repellat saepe alias maiores quos, voluptates magnam quaerat.</h4>
+                <p>Necessitatibus harum porro ipsum numquam aut possimus aperiam qui repellat fuga?
+                </p>
+            </div>
+
+            <h2>FAQ : What is next step?</h2>
+
+            <div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt accusantium minima repellat saepe alias maiores quos, voluptates magnam quaerat.</p>
+                
+                <p>Necessitatibus harum porro ipsum numquam aut possimus aperiam qui repellat fuga?
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="./libs/jquery-3.6.0.min.js"></script>
+    <!-- <script type="text/javascript" src="./libs/jquery-ui-1.13.1/jquery-ui.min.js"></script> -->
+
+    <script type="text/javascript" src="./libs/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // console.log("hi");
+            $("#acc").accordion();
+        });
+    </script>
+
+</body>
+</html>

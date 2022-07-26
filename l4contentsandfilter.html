@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contents and Filter</title>
+</head>
+<body>
+
+    <h1>This is awesome <u>js library</u></h1>
+    <h1>Are you ready to learn jQuery?</h1>
+
+    <h2>This is awesome <i>js library</i></h2>
+    <h2>Are you ready to learn jQuery?</h2>
+    
+    <script src="./libs/jquery-3.6.0.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // var getText = $('h1').contents();
+            // console.log(getText);
+            //S.fn.init(3) [text, u, text, prevObject: S.fn.init(2)]
+
+            // getText = $('h1').contents().text();
+            // console.log(getText);
+            // //This is awesome js libraryAre you ready to learn jQuery?
+
+            // getText = $('h1,h2').contents();
+            // console.log(getText);
+            // //S.fn.init(6) [text, u, text, text, i, text, prevObject: S.fn.init(4)]
+
+            // getText = $('h1,h2').contents().text();
+            // console.log(getText);
+            // //This is awesome js libraryAre you ready to learn jQuery?This is awesome js libraryAre you ready to learn jQuery?
+
+
+            // getText = $('h1').contents().filter('u');
+            // console.log(getText);
+            // //S.fn.init [u, prevObject: S.fn.init(3)]
+
+            // getText = $('h1').contents().filter('u').text();
+            // console.log(getText);
+            // //js library
+
+            // getText = $('h1,h2').contents().filter('u').text();
+            // console.log(getText);
+            // //js library
+
+            // getText = $('h1,h2').contents().filter('u,i,b').text();
+            // console.log(getText); 
+            // //js libraryjs library
+
+            // getText = $('h1,h2').contents().filter('u,i,b').html();
+            // console.log(getText); 
+            //js library
+
+            // getText = $('h1').contents().html();
+            // console.log(getText); //undefined
+        });
+    </script>
+</body>
+</html>

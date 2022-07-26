@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>each Method</title>
+    <style type="text/css">
+        body{
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <ul class="colors">
+            <li title="red color">Red</li>
+            <li title="green color">Green</li>
+            <li title="blue color">Blue</li>
+        </ul>
+
+        <button type="button" id="btn">Show Single Color</button>
+    </div>
+
+    <script type="text/javascript" src="./libs/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // console.log("hi");
+
+            $("#btn").click(function(){
+                // $("ul").children().each(function(idx){
+                //     // console.log(idx); // 0 1 2
+                //     console.log($(this).text());
+                // });
+
+                $(".colors li").each(function(){
+                    var getindex = $(this).index();
+                    var gettext = $(this).text();
+                    var gettitle = $(this).attr("title");
+                    console.log(`Index is ${getindex} and text is ${gettext} and value is ${gettitle}`);
+                });
+            });
+        });
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>UI tooltip Method</title>
+
+    <link rel="stylesheet" href="./libs/jquery-ui-1.13.1/jquery-ui.min.css" type="text/css">
+
+    <style type="text/css">
+        body{
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container{
+            width: 900px;
+            background-color: #f4f4f4;
+            
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h3>How to use jQuery Tooltip!</h3>
+        <p>
+            <a href="#" id="ttone" title="This is Tooltip of jQuery UI!">it is used</a> 
+            in conjunction with a cursor, when a user hovers the pointer over an item without clicking. 
+        </p>
+
+
+        <form action="" method="">
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="text" name="dob" id="dob" class="form-control" title="Your age must over 18" autocomplete="off" readonly>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="./libs/jquery-3.6.0.min.js"></script>
+
+    <script type="text/javascript" src="./libs/jquery-ui-1.13.1/jquery-ui.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // console.log("hi");
+
+            // $("#ttone").tooltip();
+
+            $("#ttone").tooltip({
+                // show: 3000,
+                // hide: 5000,
+
+                // show: "bounce",
+                // hide: "shake",
+
+                show:{
+                    effect: "shake",
+                    duration: 2000
+                },
+                hide:{
+                    effect: "explode",
+                    duration: 3000
+                },
+
+                track: true,
+
+                // content: "This is jQuery UI. Thanks for using our libs."
+
+                content: function(){
+                    return `
+                    <img src="./img/logo1.png" width="150px"> 
+                    <h5>This is Company LOGO</h5>
+                    <small>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</small>
+                    `;
+                }
+            });
+
+
+            // $("#dob").tooltip().datepicker();
+
+            $(document).tooltip();
+        });
+    </script>
+</body>
+</html>

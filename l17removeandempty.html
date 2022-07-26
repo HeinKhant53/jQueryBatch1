@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>remove and empty Method</title>
+</head>
+<body>
+    
+    <div>
+        <h1>Hello Heading Tag H1</h1>
+        <h2>Hello Heading Tag H2</h2>
+        <h3>Hello Heading Tag H3</h3>
+        <h2>Hello Heading Tag H2</h2>
+        <h1>Hello Heading Tag H1</h1>
+        <span>Hello i am Span Tags</span>
+    </div>
+
+
+    <div>
+        <h1>Hello Heading Tag H1</h1>
+        <h2 class="heading2">Hello Heading Tag H2</h2>
+        <h3>Hello Heading Tag H3</h3>
+        <h2>Hello Heading Tag H2</h2>
+        <h1>Hello Heading Tag H1</h1>
+        <span>Hello i am Span Tags</span>
+    </div>
+
+    <button type="button" id="removebtn">Remove</button>
+    <button type="button" id="emptybtn">Empty</button>
+    <button type="button" id="detachbtn">Detach</button>
+
+    <button type="button" id="addbtn">Add</button>
+
+
+
+
+    <script src="./libs/jquery-3.6.0.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        // $(window.document).ready(function(){
+        //     console.log('hay');
+        // });
+
+        // jQuery(document).ready(function(){
+        //     console.log('hi');
+        // });
+
+        // jQuery(window.document).ready(function(){
+        //     console.log('harr');
+        // });
+
+        // window.jQuery(document).ready(function(){
+        //     console.log('h000');
+        // });
+
+        $(document).ready(function(){
+            // console.log('hi');
+
+
+            // remove() = remove self
+            $("#removebtn").click(function(){
+                // $("h1").remove();
+                // $('h1,h2').remove();
+                // $('div').remove();
+            });
+
+            //empty() = just remove to all child elements
+            // $("#emptybtn").click(function(){
+            //     $('div').empty();
+            // });
+
+
+            // //detach()  == remove()
+            // $("#detachbtn").click(function(){
+            //     $('div').detach();
+            // });
+
+            $("#addbtn").click(function(){
+                // $('h1').css({
+                //     background: 'red'
+                // });
+
+                // $("h1,span").css({
+                //     'background': 'green',
+                //     'border': '3px solid red'
+                // });
+
+                // $("h1").add("span").css({
+                //     'background': 'green',
+                //     'border': '3px solid red'
+                // });
+
+                // $("h1").add("span,h2").css({
+                //     'background': 'green',
+                //     'border': '3px solid red'
+                // });
+
+                // $("h1").add("span").add("h3").css({
+                //     'background': 'yellow',
+                //     'color' : 'white',
+                //     'border': '3px solid red'
+                // });
+
+            });
+
+        });
+    </script>
+</body>
+</html>

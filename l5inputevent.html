@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Input Event</title>
+
+    <style type="text/css">
+        body{
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container{
+            width: 500px;
+            background: #f4f4f4;
+
+            padding: 20px;
+        }
+
+        .form-group{
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" name="firstName" id="firstName" class="form-control" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" name="lastName" id="lastName" class="form-control" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country</label>
+                <select name="country" id="country" class="form-control">
+                    <option selected disabled>Choose a country</option>
+                    <option value="mm">Myanmar</option>
+                    <option value="th">Thailand</option>
+                    <option value="indo">Indonesia</option>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" name="age" id="age" class="form-control" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="number" name="phone" id="phone" class="form-control" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="nrc">NRC</label>
+            </div>
+
+            <button>Submit</button>
+        </form>
+    </div>
+    <script src="./libs/jquery-3.6.0.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            //blur()
+            // $("#firstName").blur(function(){
+            //     console.log('firstname is working by blur');
+            // });
+            
+            //change()
+            // $("#firstName").change(function(){
+            //     console.log("firstName is working by change");
+            // });
+
+            // $("select").change(function(){
+            //     console.log("you changed to new country.");
+            // });
+
+
+            // //focus()
+            // $("#firstName").focus(function(){
+            //     console.log("firstName is working by focus");
+            // });
+
+
+            //  //focusin() = focus()
+            //  $("#firstName").focusin(function(){
+            //     console.log("firstName is working by focusin");
+            // });
+
+            //  //focusout() = blur()
+            //  $("#firstName").focusout(function(){
+            //     console.log("firstName is working by focusout");
+            // });
+            
+            // //select()
+            // $("#firstName").select(function(){
+            //     console.log("You select to some text");
+            // });
+
+            // //keydown()
+            // var q=0;
+            // $("#firstName").keydown(function(){
+            //     console.log("FirstName is working by keydown.");
+            //     console.log(q++);
+            // });
+
+            //keypress()
+            // $("#phone").keypress(function(){
+            //     console.log("phone is working by keypress.");
+            // });
+
+            //keyup()
+            $("#nrc").keyup(function(){
+                console.log("Nrc is working by keyupS");
+            });
+
+            // //submit()
+            // $("form").submit(function(e){
+            //     console.log("Form submitted");
+            //     e.preventDefault();
+            // })
+        });
+    </script>
+</body>
+</html>
+
+//17IE

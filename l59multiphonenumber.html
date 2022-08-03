@@ -34,6 +34,22 @@
                 padding:8px 10px;
                 margin:0 5px;
             }
+
+            .addbtn, .removebtn{
+                background-color: green;
+                color: #fff;
+                font-size: 12px;
+                text-decoration: none;
+                border-radius: 5px;
+                padding: 8px 10px;
+                margin: 0 5px;
+            }
+            .removebtn{
+                background-color: red;
+            }
+            .disabled{
+                background-color: #aaa;
+            }
         </style>
     </head>
     <body>
@@ -57,10 +73,40 @@
                 var maxnumber = 5;
                 var addbtn = $(".addbtn");
                 var phonebox = $(".phonenumbers");
+                var x = 1;
+                var newphoneel;
 
                 //Add
                 $(addbtn).click(function(){
-                    console.log("hi i am working");
+                    // console.log("hi i am working");
+                    if(x < maxnumber){
+                        x++;
+
+                        newphoneel = `
+                        <div>
+                            <input type="text" name="phones${x}" id="phones" class="form-control"/><a href="javascript:void(0)" class="removebtn"><i class="fas fa-trash-alt"></i></a>
+                        </div>
+                        `;
+
+                        $(phonebox).append(newphoneel);
+                    }else{
+                        $(this).addClass("disabled");
+                    }
+                });
+
+                //Remove
+                // $(".removebtn").click(function(){
+                //     console.log("hay hay");
+                // });
+
+                $(phonebox).on("click",".removebtn",function(){
+                    // console.log("hay hay");
+                    $(this).parent().remove();
+                    x--;
+
+                    if(x < 5){
+                        $(addbtn).removeClass("disabled");
+                    }
                 });
             });
         </script>
